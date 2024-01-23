@@ -17,6 +17,6 @@ def test_index(app, client):
 def test_hello(app, client):
     name = "ayoub"
     res = client.get(f"/hello/{name}")
-    assert res.status_code == 201
+    assert res.status_code == 200
     assert bytes(f"Hello, {name}!", 'utf-8') in res.data
 
